@@ -1,23 +1,15 @@
 import React from "react";
 import reactDom from "react-dom";
 
-class IslandInfo extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-
-        }
-    }
-
-    render () {
-        return (
-            <li className="navItem">
-                <p>Island information such as num of rows, columns, filled spaces</p>            
-            </li>
-        );
-    }
+function IslandInfo(props){
+    return(
+        <li className="navItem">
+            <p>Grid size:</p>           
+            <p>{props.rows} rows</p>           
+            <p>{props.columns} columns</p>           
+            <p>And a total of {props.rows*props.columns} cells</p>           
+        </li>
+    );
 }
-
-
 
 export default IslandInfo;

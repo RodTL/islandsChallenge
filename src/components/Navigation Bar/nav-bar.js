@@ -1,41 +1,24 @@
 import React from "react";
 import reactDom from "react-dom";
 
-import IslandInfo from "./IslandInfo";
 import AddColumns from "./AddColumns";
 import AddRows from "./AddRows";
+import IslandInfo from "./IslandInfo";
 import About from "./About";
+import '../../index.css';
 
-class NavBar extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-
-        }
-    }
-
-    render () {
-        return (
-            <nav className="navBar">
-                <div className="logo">place logo here</div>
-                <ul className="navBar-nav">
-                    <IslandInfo />
-                    <AddColumns />
-                    <AddRows />
-                    <About />
-                    
-                    
-                    {/*
-                    <li className="navItem">
-                        
-                    </li>
-                    */}
-                </ul>
-            </nav>
-        );
-    }
+function NavBar(props) {
+    return(
+        <nav className="navBar">
+            <div className="logo">The island Challenge</div>
+            <ul className="navBar-nav">
+                <AddColumns increaseColumns={props.increaseColumns} decreaseColumns={props.decreaseColumns} columns={props.columns} />
+                <AddRows increaseRows={props.increaseRows} decreaseRows={props.decreaseRows} rows={props.rows} />
+                <IslandInfo rows={props.rows} columns={props.columns} />
+                <About />
+            </ul>
+        </nav>
+    );
 }
-
-
 
 export default NavBar;

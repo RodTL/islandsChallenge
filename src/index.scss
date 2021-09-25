@@ -1,0 +1,115 @@
+:root {
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(245, 245, 245);
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgb(27, 83, 29);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(109, 101, 37);
+  }
+}
+
+.navBar {
+  width: 12rem;
+  height: 100vh;
+  position: fixed;
+  background-color: rgb(179, 147, 107);
+  transition: width 200ms ease;
+  overflow: hidden;
+
+  .logo {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Open Sans";
+    color: rgb(24, 78, 36);
+    margin-top: 1rem;
+  }
+
+  .navBar-nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .navItem {
+      height: 9rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &:first-child {
+        margin-bottom: 5rem;
+      }
+
+      &:last-child {
+        margin-top: auto;
+      }
+
+      .gridControls {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 40px;
+        text-decoration: none;
+        //filter: grayscale(100%) opacity(0.7);
+        //transition: 600ms;
+
+        input {
+          height: 100%;
+          width: 2.5rem;
+          background-color: rgb(180, 155, 125);
+          color: whitesmoke;
+          font-size: 2rem;
+          text-align: center;
+        }
+        ::placeholder {
+          color: whitesmoke;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.playArea {
+  margin-left: 12rem;
+
+  .playArea-grid {
+    height: 100vh;
+    width: calc(100vw - 12rem);
+    border-collapse: collapse;
+
+    td {
+      padding: 0.5px;
+      background-color: rgb(29, 93, 145);
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

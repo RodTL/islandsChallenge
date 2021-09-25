@@ -1,11 +1,27 @@
 import React from "react";
 import reactDom from "react-dom";
-import sea from '../../media/sea8bit.gif'
+
+import Cell from "./Cell";
+
 
 function PlayArea() {
     return (
         <div className="playArea">
-            <img src={sea}/>
+            <table className="playArea-grid">
+                <tbody>
+                    <tr>
+                        <Cell />
+                        <Cell />
+                        <Cell />
+                    </tr>
+                    <tr>
+                        <Cell />
+                        <Cell />
+                        <Cell />
+                    </tr>
+                </tbody>
+            </table>
+            {/*<img src={sea}/>*/}
         </div>
     );
 }

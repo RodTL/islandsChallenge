@@ -1,23 +1,21 @@
 import React from "react";
 import reactDom from "react-dom";
 
-class AddRows extends React.Component {
-    constructor() {
-        super();
-        this.state = {
+import addBtn from '../../media/plus.png';
+import removeBtn from '../../media/less.png';
+import '../../index.css';
 
-        }
-    }
-
-    render () {
-        return (
-            <li className="navItem">
-                <p>Add Rows UI</p>               
-            </li>
-        );
-    }
+function AddRows(props) {
+    return(
+        <li className="navItem">
+            <p>Rows</p>
+            <div className="gridControls">
+                <input type="image" src={removeBtn} onClick={props.decreaseRows} />
+                <input type="text" placeholder={props.rows} />
+                <input type="image" src={addBtn} onClick={props.increaseRows} />
+            </div>
+        </li>
+    );
 }
-
-
 
 export default AddRows;

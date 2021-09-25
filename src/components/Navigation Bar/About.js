@@ -12,7 +12,7 @@ class About extends React.Component {
     render () {
         return (
             <li className="navItem">
-                <p>Information about me</p>               
+                <p>This application was developed by Rodolfo Tamayo</p>               
             </li>
         );
     }
