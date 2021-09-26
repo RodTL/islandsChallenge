@@ -11,7 +11,7 @@ function AddColumns(props) {
             <p>Columns</p>
             <div className="gridControls">
                 <input type="image" src={removeBtn} onClick={props.decreaseColumns} />
-                <input type="text" placeholder={props.columns} />
+                <input type="number" value={props.columns} onInputCapture={props.setColumns} />
                 <input type="image" src={addBtn} onClick={props.increaseColumns} />
             </div>
         </li>

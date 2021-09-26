@@ -16,14 +16,18 @@ class Cell extends React.Component{
       toggleTerrain(){
         if (this.state.terrain == sea){
             this.setState({ terrain: land });
+            this.props.updateLandCount(true);
         }else {
             this.setState({ terrain: sea });
+            this.props.updateLandCount(false);
         }
       }
 
       render(){
           return(
-              <td><img src={this.state.terrain} onClick={this.toggleTerrain} /></td>
+              <td>
+                <img src={this.state.terrain} onClick={this.toggleTerrain} />
+              </td>
           );
       }
 }

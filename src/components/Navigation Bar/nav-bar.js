@@ -12,9 +12,9 @@ function NavBar(props) {
         <nav className="navBar">
             <div className="logo">The island Challenge</div>
             <ul className="navBar-nav">
-                <AddColumns increaseColumns={props.increaseColumns} decreaseColumns={props.decreaseColumns} columns={props.columns} />
-                <AddRows increaseRows={props.increaseRows} decreaseRows={props.decreaseRows} rows={props.rows} />
-                <IslandInfo rows={props.rows} columns={props.columns} />
+                <AddColumns increaseColumns={props.increaseColumns} decreaseColumns={props.decreaseColumns} setColumns={props.setColumns} columns={props.columns} />
+                <AddRows increaseRows={props.increaseRows} decreaseRows={props.decreaseRows} setRows={props.setRows} rows={props.rows} />
+                <IslandInfo rows={props.rows} columns={props.columns} landCount={props.landCount}/>
                 <About />
             </ul>
         </nav>
