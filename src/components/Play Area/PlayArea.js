@@ -13,36 +13,10 @@ function PlayArea(props){
     for(let i=0; i<props.rows; i++){
         const temp = [];
         for(let j=0; j<props.columns; j++){
-            temp.push({id:`${i+1},${j+1}`, terrain: sea, content:<Cell id={`C${i+1}${j+1}`} updateLandCount={props.updateLandCount}/>});
+            temp.push({id:`${i+1},${j+1}`, terrain: sea, content:<Cell rows={props.rows} id={`${i+1}${j+1}`} updateLandCount={props.updateLandCount}/>});
         }
         cells.push(temp);
     }
-
-    
-
-    /*const totalLands = 0;
-        
-        for(let i=0; i<props.rows; i++){
-            for(let j=0; j<props.columns; j++){
-                if(this[`C${i+1}${j+1}`].current.includes('land') === true){
-                    totalLands= totalLands + 1;
-                }
-            }
-        }*/
-        
-   
-    
-    //console.log(this.refs[C11].current);
-    /*
-    const newCells = cells.map(rows => (rows.map((item) => ({id: item.id, terrain: item.terrain}))) );
-    const newTotalLands = newCells.flat().filter(l => l.terrain == sea).length;
-    console.log(newTotalLands);
-
-    for (let i=0; i<newLands; i++){
-        props.updateLandCount(true);
-    }
-    //props.updateCells(newLands);     
-    */
     
     return(
         <div className="playArea">

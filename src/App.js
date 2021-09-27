@@ -40,7 +40,6 @@ class App extends React.Component{
 
   decreaseRows(){
     if (this.state.rows>1){
-      //aquí regresar toda la última row a sea
       this.setState((prevState) => ({ 
         rows: parseInt(prevState.rows) - 1          
       }));

@@ -15,6 +15,20 @@ class Cell extends React.Component{
 
       }
 
+      /*getSnapshotBeforeUpdate(prevProps, prevState) {
+        if (prevProps.id.startsWith(prevProps.rows) && prevState.terrain == land){
+          this.props.updateLandCount(false);
+          this.setState({ terrain: sea });
+        }
+      }*/
+
+      componentWillUnmount(){
+        if(this.state.terrain == land){
+          this.props.updateLandCount(false);
+          this.setState({ terrain: sea });
+        }
+      }
+
       toggleTerrain(){
         if (this.state.terrain == sea){
             this.props.updateLandCount(true);
