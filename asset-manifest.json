@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/islandsChallenge/static/css/main.2bf8f933.chunk.css",
+    "main.js": "/islandsChallenge/static/js/main.0f298c77.chunk.js",
+    "main.js.map": "/islandsChallenge/static/js/main.0f298c77.chunk.js.map",
+    "runtime-main.js": "/islandsChallenge/static/js/runtime-main.2c31d327.js",
+    "runtime-main.js.map": "/islandsChallenge/static/js/runtime-main.2c31d327.js.map",
+    "static/js/2.881a1e43.chunk.js": "/islandsChallenge/static/js/2.881a1e43.chunk.js",
+    "static/js/2.881a1e43.chunk.js.map": "/islandsChallenge/static/js/2.881a1e43.chunk.js.map",
+    "index.html": "/islandsChallenge/index.html",
+    "static/css/main.2bf8f933.chunk.css.map": "/islandsChallenge/static/css/main.2bf8f933.chunk.css.map",
+    "static/js/2.881a1e43.chunk.js.LICENSE.txt": "/islandsChallenge/static/js/2.881a1e43.chunk.js.LICENSE.txt",
+    "static/media/land.29d9d906.png": "/islandsChallenge/static/media/land.29d9d906.png",
+    "static/media/less.ee0b39d9.png": "/islandsChallenge/static/media/less.ee0b39d9.png",
+    "static/media/plus.1507724f.png": "/islandsChallenge/static/media/plus.1507724f.png",
+    "static/media/sea8bit.24db9027.gif": "/islandsChallenge/static/media/sea8bit.24db9027.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c31d327.js",
+    "static/js/2.881a1e43.chunk.js",
+    "static/css/main.2bf8f933.chunk.css",
+    "static/js/main.0f298c77.chunk.js"
+  ]
+}
