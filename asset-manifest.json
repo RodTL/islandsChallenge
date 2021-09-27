@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/islandsChallenge/static/css/main.2bf8f933.chunk.css",
-    "main.js": "/islandsChallenge/static/js/main.0f298c77.chunk.js",
-    "main.js.map": "/islandsChallenge/static/js/main.0f298c77.chunk.js.map",
+    "main.js": "/islandsChallenge/static/js/main.38e0f93b.chunk.js",
+    "main.js.map": "/islandsChallenge/static/js/main.38e0f93b.chunk.js.map",
     "runtime-main.js": "/islandsChallenge/static/js/runtime-main.2c31d327.js",
     "runtime-main.js.map": "/islandsChallenge/static/js/runtime-main.2c31d327.js.map",
     "static/js/2.881a1e43.chunk.js": "/islandsChallenge/static/js/2.881a1e43.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.2c31d327.js",
     "static/js/2.881a1e43.chunk.js",
     "static/css/main.2bf8f933.chunk.css",
-    "static/js/main.0f298c77.chunk.js"
+    "static/js/main.38e0f93b.chunk.js"
   ]
 }
