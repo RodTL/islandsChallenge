@@ -1,5 +1,4 @@
 import React from "react";
-import reactDom from "react-dom";
 
 class About extends React.Component {
     constructor() {

@@ -1,5 +1,4 @@
 import React from 'react';
-import reactDom from "react-dom";
 
 import Cell from './Cell';
 import sea from '../../media/sea8bit.gif'
@@ -13,7 +12,7 @@ function PlayArea(props){
     for(let i=0; i<props.rows; i++){
         const temp = [];
         for(let j=0; j<props.columns; j++){
-            temp.push({id:`${i+1},${j+1}`, terrain: sea, content:<Cell rows={props.rows} id={`${i+1}${j+1}`} updateLandCount={props.updateLandCount}/>});
+            temp.push({id:`${i+1},${j+1}`, terrain: sea, content:<Cell rows={props.rows} id={`${i+1}${j+1}`} r={i+1} c={j+1} updateLandCount={props.updateLandCount}/>});
         }
         cells.push(temp);
     }
@@ -22,7 +21,7 @@ function PlayArea(props){
         <div className="playArea">
             <table className="playArea-grid">
                 <tbody>
-                    {cells.length > 0 ? cells.map(rows => <tr> {rows.map(item => item.content)} </tr> ) : []}
+                    {cells.length > 0 ? cells.map(rows => <tr>{rows.map(item => item.content)}</tr> ) : []}
                 </tbody>
             </table>
         </div>
@@ -76,9 +75,6 @@ class PlayArea extends React.Component{
     }
 }
 */
-
-
-//item => item.content
 
 
 export default PlayArea;

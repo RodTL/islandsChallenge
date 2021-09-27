@@ -13,7 +13,6 @@ class App extends React.Component{
     this.state = {
       rows: 3,
       columns: 3,
-      //cells: [[{id:"1,1", terrain: sea}, {id:"1,2", terrain: sea}, {id:"1,3", terrain: sea}],[{id:"2,1", terrain: sea}, {id:"2,2", terrain: sea}, {id:"2,3", terrain: sea}],[{id:"3,1", terrain: sea}, {id:"3,2", terrain: sea}, {id:"3,3", terrain: sea}]],
       landCount: 0,
       islandCount: 0
     }
@@ -23,8 +22,8 @@ class App extends React.Component{
     this.increaseColumns = this.increaseColumns.bind(this);
     this.decreaseColumns = this.decreaseColumns.bind(this);
     this.setColumns = this.setColumns.bind(this);
-    this.updateCells = this.updateCells.bind(this);
     this.updateLandCount = this.updateLandCount.bind(this);
+    //this.updateIsandCount = this.updateIsandCount.bind(this);
   }
 
   
@@ -54,6 +53,7 @@ class App extends React.Component{
       this.setState((prevState) => ({
         rows: prevState.rows
       }));
+      alert("The max number of rows is 10");
     }
   }
 
@@ -81,12 +81,8 @@ class App extends React.Component{
       this.setState((prevState) => ({
         columns: prevState.columns
       }));
+      alert("The max number of columns is 10");
     }
-  }
-
-  updateCells(newCells){
-    const newLands = newCells.flat().filter(l => l.terrain == land).length;
-    //this.setState({landCount: newLands});
   }
   
   updateLandCount(updwn){
@@ -99,13 +95,26 @@ class App extends React.Component{
         landCount: parseInt(prevState.landCount) - 1
       }));
     }
-  } 
+  }
+  
+  /*
+  updateIslandCount(updwn){
+    if (updwn === true){
+      this.setState((prevState) => ({
+        islandCount: parseInt(prevState.islandCount) + 1
+      }));
+    }else if (updwn === false){
+      this.setState((prevState) => ({
+        islandCount: parseInt(prevState.islandCount) - 1
+      }));
+    }
+  }*/
 
   render() {
     return (
       <div className="App">
         <NavBar increaseRows={this.increaseRows} decreaseRows={this.decreaseRows} setRows={this.setRows} increaseColumns={this.increaseColumns} decreaseColumns={this.decreaseColumns} setColumns={this.setColumns} rows={this.state.rows} columns={this.state.columns} landCount={this.state.landCount}/>
-        <PlayArea rows={this.state.rows} columns={this.state.columns} updateCells={this.updateCells} landCount={this.state.landCount} updateLandCount={this.updateLandCount} />
+        <PlayArea rows={this.state.rows} columns={this.state.columns} landCount={this.state.landCount} updateLandCount={this.updateLandCount}/>
       </div>
     );
   }
