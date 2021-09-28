@@ -42,7 +42,6 @@ class App extends React.Component{
       this.setState((prevState) => ({ 
         rows: parseInt(prevState.rows) - 1          
       }));
-      console.log("Aquí debo recontar las lands");
     }
   }
 
@@ -70,7 +69,6 @@ class App extends React.Component{
       this.setState((prevState) => ({
           columns: parseInt(prevState.columns) - 1
       }));
-      console.log("Aquí debo recontar las lands");
     }
   }
 

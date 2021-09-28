@@ -16,8 +16,6 @@ class Cell extends React.Component{
         }
         this.toggleTerrain = this.toggleTerrain.bind(this);
 
-        this[`C${this.props.id}`] = React.createRef();
-
       }
 
       componentWillUnmount(){
@@ -26,6 +24,10 @@ class Cell extends React.Component{
           this.setState({ terrain: sea });
         }
       }
+
+      /*componentDidMount(){
+        this.props.updateCmap();
+      }*/
 
       toggleTerrain(){
         if (this.state.terrain === sea){
@@ -40,8 +42,8 @@ class Cell extends React.Component{
 
       render(){
           return(
-              <td>
-                <img ref={this[`C${this.props.r}${this.props.c}`]} src={this.state.terrain} onClick={this.toggleTerrain} alt="terrain"/>
+              <td>                              
+                <div onClick={this.toggleTerrain} style={{backgroundImage: `url(${this.state.terrain})` }}></div>                            
               </td>
           );
       }

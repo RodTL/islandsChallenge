@@ -4,7 +4,7 @@ import Cell from './Cell';
 import sea from '../../media/sea8bit.gif'
 import land from '../../media/land.png'
 
-
+/*
 function PlayArea(props){
 
     const cells = [];
@@ -27,54 +27,55 @@ function PlayArea(props){
         </div>
     );
 }
+*/
 
-/*
 class PlayArea extends React.Component{
     constructor(){
         super();
         this.state ={
-            virtualLands: 0
+            terrainMap: [{r:0, c:0, t:"s"}],
+            rmap: 0,
+            cmap: 0
         }
-        this.virtualLandUpdate = this.virtualLandUpdate.bind(this);
+        this.updateTerrainMap = this.updateTerrainMap.bind(this);
+        this.updateCmap = this.updateCmap.bind(this);
     }
 
-    virtualLandUpdate(updwn){
-        console.log(this.state.virtualLands);
-        if (updwn === true){
-            this.setState((prevState) => ({
-              virtualLands: parseInt(prevState.virtualLands) + 1
-            }));
-          }else if (updwn === false){
-            this.setState((prevState) => ({
-                virtualLands: parseInt(prevState.virtualLands) - 1
-            }));
-          }
-        
-        this.props.updateLandCount("st", this.virtualLands);
+    updateCmap(){
+        this.setState((prevState) => ({
+            cmap: parseInt(prevState.cmap) + 1
+          }));
     }
     
+    updateTerrainMap(newElement){
+        this.setState({terrainMap: newElement});
+    }
+
+    
     render(){
+        
         const cells = [];
 
         for(let i=0; i<this.props.rows; i++){
             const temp = [];
             for(let j=0; j<this.props.columns; j++){
-                temp.push({id:`${i+1},${j+1}`, terrain: sea, content:<Cell virtualLandUpdate={this.virtualLandUpdate} updateLandCount={this.props.updateLandCount}/>});
+                temp.push({id:`${i+1},${j+1}`, terrain: sea, content:<Cell terrainMap={this.state.terrainMap} updateCmap={this.updateCmap} rows={this.props.rows} id={`${i+1}${j+1}`} r={i+1} c={j+1} updateLandCount={this.props.updateLandCount}/>});               
             }
             cells.push(temp);
         }
+        
         return(
             <div className="playArea">
                 <table className="playArea-grid">
                     <tbody>
-                        {cells.length > 0 ? cells.map(rows => <tr> {rows.map(item => item.content)} </tr> ) : []}
+                        {cells.length > 0 ? cells.map(rows => <tr>{rows.map(item => item.content)}</tr> ) : []}
                     </tbody>
                 </table>
             </div>
         );
     }
 }
-*/
+
 
 
 export default PlayArea;
